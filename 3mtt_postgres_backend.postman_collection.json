@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "f33426d0-d08c-43c0-98e2-4cf9c16023cd",
+		"name": "3mtt_postgres_backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43166856"
+	},
+	"item": [
+		{
+			"name": "create new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\n//   \"username\": \"OwnerUser\",\n//   \"email\": \"owner@example.com\",\n//   \"password\": \"password123\",\n//   \"role\": \"owner\",\n//   \"location\": \"Lagos\",\n//   \"phone\": \"08012345678\"\n// }\n\n// {\n//   \"username\": \"chima_owner\",\n//   \"email\": \"chima.owner@example.com\",\n//   \"location\": \"Lagos, Nigeria\",\n//   \"role\": \"owner\",\n//   \"phone\": \"+2348012345678\",\n//   \"password\": \"SecurePass123!\"\n// }\n{\n    \"name\": \"john Mathew\",\n    \"email\": \"johnM@example.com\",\n    \"age\": 22\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\n//   \"username\": \"OwnerUser\",\n//   \"email\": \"owner@example.com\",\n//   \"password\": \"password123\",\n//   \"role\": \"owner\",\n//   \"location\": \"Lagos\",\n//   \"phone\": \"08012345678\"\n// }\n\n// {\n//   \"username\": \"chima_owner\",\n//   \"email\": \"chima.owner@example.com\",\n//   \"location\": \"Lagos, Nigeria\",\n//   \"role\": \"owner\",\n//   \"phone\": \"+2348012345678\",\n//   \"password\": \"SecurePass123!\"\n// }\n{\n    \"name\": \"Chima Marcel\",\n    \"email\": \"chima.owner@example.com\",\n    \"age\": 27\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get one user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\n//   \"username\": \"OwnerUser\",\n//   \"email\": \"owner@example.com\",\n//   \"password\": \"password123\",\n//   \"role\": \"owner\",\n//   \"location\": \"Lagos\",\n//   \"phone\": \"08012345678\"\n// }\n\n// {\n//   \"username\": \"chima_owner\",\n//   \"email\": \"chima.owner@example.com\",\n//   \"location\": \"Lagos, Nigeria\",\n//   \"role\": \"owner\",\n//   \"phone\": \"+2348012345678\",\n//   \"password\": \"SecurePass123!\"\n// }\n{\n    \"name\": \"Chima Marcel\",\n    \"email\": \"chima.owner@example.com\",\n    \"age\": 27\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/users/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user info",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\n//   \"username\": \"OwnerUser\",\n//   \"email\": \"owner@example.com\",\n//   \"password\": \"password123\",\n//   \"role\": \"owner\",\n//   \"location\": \"Lagos\",\n//   \"phone\": \"08012345678\"\n// }\n\n// {\n//   \"username\": \"chima_owner\",\n//   \"email\": \"chima.owner@example.com\",\n//   \"location\": \"Lagos, Nigeria\",\n//   \"role\": \"owner\",\n//   \"phone\": \"+2348012345678\",\n//   \"password\": \"SecurePass123!\"\n// }\n{\n    \"name\": \"john Mathew\",\n    \"email\": \"johnny@example.com\",\n    \"age\": 23\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/users/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\n//   \"username\": \"OwnerUser\",\n//   \"email\": \"owner@example.com\",\n//   \"password\": \"password123\",\n//   \"role\": \"owner\",\n//   \"location\": \"Lagos\",\n//   \"phone\": \"08012345678\"\n// }\n\n// {\n//   \"username\": \"chima_owner\",\n//   \"email\": \"chima.owner@example.com\",\n//   \"location\": \"Lagos, Nigeria\",\n//   \"role\": \"owner\",\n//   \"phone\": \"+2348012345678\",\n//   \"password\": \"SecurePass123!\"\n// }\n{\n    \"name\": \"john Mathew\",\n    \"email\": \"johnny@example.com\",\n    \"age\": 23\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
